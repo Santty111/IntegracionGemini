@@ -1,7 +1,12 @@
+using IntegracionGemini.Interfaces;
+using IntegracionGemini.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<IChatbotService, GeminiRepository>();
 
 var app = builder.Build();
 

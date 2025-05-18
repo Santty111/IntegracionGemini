@@ -8,8 +8,6 @@ using Newtonsoft.Json;
 namespace IntegracionGemini.Repositories
 {
     
-
-
     public class GeminiRepository : IChatbotService
     {
         private HttpClient _httpClient;
@@ -24,7 +22,7 @@ namespace IntegracionGemini.Repositories
         
         public async Task<string> ObtenerRespuestaChatbot(string prompt)
         {
-            string url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + geminiApiKey;
+            string url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key="+ geminiApiKey;
             GeminiRequest request = new GeminiRequest
             {
                 contents = new List<GeminiContent>
@@ -51,10 +49,9 @@ namespace IntegracionGemini.Repositories
         }
 
 
-        public bool GuardarRespuestaBaseDatoLocal(string prompt, string respuesta)
+        public bool GuardarRespuestaBaseDatosLocal(string prompt, string respuesta)
         {
             throw new NotImplementedException();
         }
-
     }
 }

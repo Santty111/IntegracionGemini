@@ -8,14 +8,11 @@ namespace IntegracionGemini.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
         private IChatbotService _chatbotService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IChatbotService chatbotService)
         {
-            _logger = logger;
-            _chatbotService = new GeminiRepository();
-
+            _chatbotService = chatbotService;
         }
 
         public async Task<IActionResult> Index()

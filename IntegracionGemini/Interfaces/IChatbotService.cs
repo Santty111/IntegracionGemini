@@ -3,7 +3,7 @@
     public interface IChatbotService
     {
         public Task<string> ObtenerRespuestaChatbot(string prompt);
-        public bool GuardarRespuestaBaseDatoLocal(string prompt, string respuesta);
+        public bool GuardarRespuestaBaseDatosLocal(string prompt, string respuesta);
 
     }
 }

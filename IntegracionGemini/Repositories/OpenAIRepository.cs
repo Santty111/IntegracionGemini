@@ -5,10 +5,7 @@ namespace IntegracionGemini.Repositories
 {
     public class OpenAIRepository : IChatbotService
     {
-        private readonly ILogger<HomeController> _logger;
-
-
-        public bool GuardarRespuestaBaseDatoLocal(string prompt, string respuesta)
+        public bool GuardarRespuestaBaseDatosLocal(string prompt, string respuesta)
         {
             throw new NotImplementedException();
         }
